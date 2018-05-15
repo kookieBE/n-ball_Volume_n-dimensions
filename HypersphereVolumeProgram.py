@@ -13,10 +13,9 @@ def randPoint(): #defining function which returns a point with a random set of c
   return point;
 
 def magnitude(list): #defining function which finds magnitude of vector drawn from origin to point
-  sum = []
+  leng = 0
   for v in list:
-    sum.append((v)**2)
-  leng = (sum)**0.5
+    leng += v**2
   return leng;
 
 def sort(list): #function finds ratio
@@ -40,7 +39,6 @@ while k != reps:
   
   for p in pingedPoints:
     lengths.append(magnitude(p))
-  indvRatio = [0,0]
   indvRatio = sort(lengths)
   print(str(k)+' '+str(indvRatio))
   ratio.append(indvRatio)
